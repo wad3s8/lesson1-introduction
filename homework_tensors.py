@@ -33,7 +33,8 @@ indexing_cutting_tensor = torch.randint(0, 5, (5, 5, 5))
 print(f'Весь tensor: {indexing_cutting_tensor}')
 print(f'Первая строка: {indexing_cutting_tensor[:1, :1]}')
 print(f'Последний стоблец: {indexing_cutting_tensor[:, :, -1:]}')
-print(f'Подматрицу размером 2x2 из центра тензора: {indexing_cutting_tensor[2, ]}')
+print(f'Подматрицу размером 2x2 из центра тензора: {indexing_cutting_tensor[2, 1:3, 1:3]}')
+print(f'Все элементы с четными индексами: {indexing_cutting_tensor[::2, ::2, ::2]}')
 
 # 1.4 Работа с формами
 tensor24 = torch.arange(24)
